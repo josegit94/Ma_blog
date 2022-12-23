@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+  --primary: #bc4123;
+  --secondary: #2b3452;
+}
+body{
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins";
+  background: #fff;
+}
+*{
+  color: var(--secondary);
+  margin: 0;
+}
+p{
+  margin: 20px 0;
+}
+.btn{
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: #fff;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+/* navbar */
+header nav{
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+header nav h1{
+  margin-right: auto;
+}
+header nav a{
+  text-decoration: none;
+  padding: 6px;
+}
+header nav a.active{
+  border-bottom:2px solid var(--primary);
+}
+
+/* our product */
+.products{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products h4{
+  margin-bottom: 2rem;
+}
+.cards{
+  padding: 2rem;
+  display: flex;
+  gap: 20px;
+}
+.product img{
+  width: 300px;
+}
