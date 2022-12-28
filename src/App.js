@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Home from './pages/Home'
 import About from './pages/About'
+import Testimonial from "./components/Testimonial";
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="about" element={<About/>} ></Route>
       </Routes>
+      <Testimonial/>
+      <Footer/>
     </main>
     </BrowserRouter>
   );
