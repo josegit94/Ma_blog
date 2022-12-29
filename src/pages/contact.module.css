@@ -1,0 +1,71 @@
+.contact{
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+    width: 80%;
+    margin: 2rem auto;
+    justify-content: space-between;
+}
+.contact h1{
+    color: #3f3d56;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form textarea,
+.form input{
+    margin: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #3f3d56;
+    border-radius: 6px;
+}
+.form input:focus,
+.form textarea:focus{
+    outline: none;
+}
+.btn{
+    background: #3f3d56;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.btn:hover{
+    background: #6c63ff;
+    border: 1px solid #6c63ff;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.social svg{
+    cursor: pointer;
+    margin: 1rem;
+}
+.social svg:hover{
+    color: #6c63ff;
+}
+
+
+
+@media (max-width:768px){
+    .contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    .social{
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+}

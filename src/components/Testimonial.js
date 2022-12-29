@@ -12,7 +12,7 @@ const Testimonial = () => {
               <p>All people should know that collections really inspired for everyone who loves fashion.</p>
               <div className='avatar'>
                   <img src={avatar} alt=""></img>
-                  <h4>Mba Rizeyla</h4>
+                  <h4>Daniella Rizeyla</h4>
               </div>
             </div>
 
@@ -21,7 +21,7 @@ const Testimonial = () => {
               <p>All people should know that collections really inspired for everyone who loves fashion.</p>
               <div className='avatar'>
                   <img src={avatar} alt=""></img>
-                  <h4>Mba Rizeyla</h4>
+                  <h4>Daniella Rizeyla</h4>
               </div>
             </div>
 
