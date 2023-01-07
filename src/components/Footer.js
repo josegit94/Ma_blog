@@ -1,4 +1,5 @@
 import { FaInstagramSquare, FaFacebookSquare, FaTwitterSquare} from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -18,6 +19,7 @@ const Footer = () => {
             <p>Location</p>
             <p>Email</p>
             <p>Telephone</p>
+           <NavLink to= "/login"> <button className="btn">Admin</button></NavLink>
           </div>
         </div>
       </div>

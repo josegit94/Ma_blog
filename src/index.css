@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeon+Sung&display=swap');
 
 :root{
   --primary: #bc4123;
@@ -7,7 +7,7 @@
 body{
   margin: 0;
   font-family: "Poppins";
-  background: #fff;
+  background: rgb(198, 192, 192);
 }
 *{
   color: var(--secondary);
@@ -36,6 +36,8 @@ header nav{
 }
 header nav h1{
   margin-right: auto;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 36px;
 }
 header nav a{
   text-decoration: none;
@@ -93,6 +95,10 @@ header nav a.active{
   padding: 2rem;
   display: flex;
   gap: 2rem;
+}
+.product {
+  display: flex;
+  flex-direction: column;
 }
 .product img{
   width: 300px;
