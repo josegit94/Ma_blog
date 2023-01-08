@@ -41,7 +41,7 @@ const Posts = () => {
                 </div>
                 <h4> {post.title} </h4>
                 <p>{post.caption}</p>
-                <p>{post.price}</p>
+                <p>Rwf {post.price}</p>
             
         </div>
         
