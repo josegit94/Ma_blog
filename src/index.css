@@ -99,9 +99,26 @@ header nav a.active{
 .product {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 .product img{
   width: 300px;
+}
+.delete {
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(245, 191, 191);
+  color: rgb(242, 100, 100)
+}
+.edit {
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(204, 204, 243);
+  color: rgb(139, 139, 234);
 }
 
 /* testimonial */
@@ -229,4 +246,10 @@ border-bottom: 1px solid gray;
   border: none;
   background-color: teal;
   cursor: pointer;
+}
+
+.auth p {
+ font-style: 12px;
+ color: red;
+ text-align: center;
 }
