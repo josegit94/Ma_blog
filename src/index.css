@@ -81,6 +81,7 @@ header nav a.active{
   width: 150px;
 }
 
+
 /* our product */
 .products{
   display: flex;
@@ -210,6 +211,7 @@ header nav a.active{
   cursor: pointer;
 }
 
+
 .auth{
   display: flex;
   flex-direction: column;
@@ -252,4 +254,49 @@ border-bottom: 1px solid gray;
  font-style: 12px;
  color: red;
  text-align: center;
+}
+@media(max-width:768px){
+  header nav{
+    display: none;
+  }
+  .hero{
+    flex-direction: column;
+    padding: 0;
+  }
+  .content{
+    width: 100%;
+    text-align: center;
+  }
+  .hero img{
+    display: none;
+  }
+  .cards{
+    flex-direction: column;
+    padding: 0;
+  }
+  .stories{
+    flex-direction: column;
+    padding: 0;
+  }
+  .story{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .story p{
+    font-size: 14px;
+  }
+  .footer_top{
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+  }
+  .footer_bottom{
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+  }
+  .testimonial{
+    padding: 0;
+  }
 }
