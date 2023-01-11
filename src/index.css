@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeon+Sung&display=swap');
 
 :root{
   --primary: #bc4123;
@@ -7,7 +7,7 @@
 body{
   margin: 0;
   font-family: "Poppins";
-  background: #fff;
+  background: rgb(198, 192, 192);
 }
 *{
   color: var(--secondary);
@@ -36,6 +36,8 @@ header nav{
 }
 header nav h1{
   margin-right: auto;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 36px;
 }
 header nav a{
   text-decoration: none;
@@ -95,8 +97,29 @@ header nav a.active{
   display: flex;
   gap: 2rem;
 }
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 .product img{
   width: 300px;
+}
+.delete {
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(245, 191, 191);
+  color: rgb(242, 100, 100)
+}
+.edit {
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(204, 204, 243);
+  color: rgb(139, 139, 234);
 }
 
 /* testimonial */
@@ -234,4 +257,97 @@ header nav a.active{
   .testimonial{
     padding: 0;
   }
+}
+
+
+
+@media(max-width:768px){
+  header nav{
+    display: none;
+  }
+  .hero{
+    flex-direction: column;
+    padding: 0;
+  }
+  .content{
+    width: 100%;
+    text-align: center;
+  }
+  .hero img{
+    display: none;
+  }
+  .cards{
+    flex-direction: column;
+    padding: 0;
+  }
+  .stories{
+    flex-direction: column;
+    padding: 0;
+  }
+  .story{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .story p{
+    font-size: 14px;
+  }
+  .footer_top{
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+  }
+  .footer_bottom{
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+  }
+  .testimonial{
+    padding: 0;
+  }
+}
+
+
+.auth{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  height: 100vh; 
+  background-color:rgb(198, 192, 192);
+}
+
+.auth h1{
+  font-size: 20px;
+  color: teal;
+  margin-bottom: 20px; 
+}
+
+.auth form{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: aliceblue;
+  width: 200px;
+  gap: 30px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.auth input {
+padding: 10px;
+border: none;
+border-bottom: 1px solid gray;
+}
+
+.auth button{
+  padding: 10px;
+  border: none;
+  background-color: teal;
+  cursor: pointer;
+}
+
+.auth p {
+ font-style: 12px;
+ color: red;
+ text-align: center;
 }

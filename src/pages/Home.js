@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+import Testimonial from '../components/Testimonial'
 import product from "./../img/prod1.jpg";
 import product1 from "./../img/prod2.jpg";
 import product2 from "./../img/prod3.jpg";
@@ -28,6 +30,7 @@ const Home = () => {
             <img src={product} alt="product" />
             <h4>Maroon Classical Jacket</h4>
             <p>$48</p>
+            <NavLink to ="contact"><button className="btn">Shop Now</button></NavLink>
           </div>
 
           <div className="product">
@@ -43,9 +46,58 @@ const Home = () => {
           </div>
           
         </div>
+        <h1>Trending Outfit of The Week</h1>
+
+<div className="cards">
+  <div className="product">
+    <img src={product} alt="product" />
+    <h4>Maroon Classical Jacket</h4>
+    <p>$48</p>
+    <NavLink to ="contact"><button className="btn">Shop Now</button></NavLink>
+  </div>
+
+  <div className="product">
+    <img src={product1} alt="product" />
+    <h4>Maroon Classical Jacket</h4>
+    <p>$48</p>
+  </div>
+
+  <div className="product">
+    <img src={product2} alt="product" />
+    <h4>Maroon Classical Jacket</h4>
+    <p>$48</p>
+  </div>
+  
+</div>
+<h1>Trending Outfit of The Week</h1>
+
+<div className="cards">
+  <div className="product">
+    <img src={product} alt="product" />
+    <h4>Maroon Classical Jacket</h4>
+    <p>$48</p>
+    <NavLink to ="contact"><button className="btn">Shop Now</button></NavLink>
+  </div>
+
+  <div className="product">
+    <img src={product1} alt="product" />
+    <h4>Maroon Classical Jacket</h4>
+    <p>$48</p>
+  </div>
+
+  <div className="product">
+    <img src={product2} alt="product" />
+    <h4>Maroon Classical Jacket</h4>
+    <p>$48</p>
+  </div>
+  
+</div>
       </div>
+      <Testimonial/>
     </div>
+    
   );
+  
 };
 
 export default Home;

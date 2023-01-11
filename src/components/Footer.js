@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { FaInstagramSquare, FaFacebookSquare, FaTwitterSquare} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../context/authContext';
 
 const Footer = () => {
+  const {currentUser, logout} = useContext(AuthContext)
   return (
     <div className="main_footer">
       <div className="footer_top">
@@ -18,12 +22,15 @@ const Footer = () => {
             <p>Location</p>
             <p>Email</p>
             <p>Telephone</p>
+          {currentUser ? (<Link to= "/"> <button className="btn" onClick={logout}>Logout</button></Link>) : (
+           <Link to= "/login"> <button className="btn">Admin</button></Link>
+          )}
           </div>
         </div>
       </div>
 
       <div className="footer_bottom">
-        <p>Copyright &copy; 2022 Ma, Inc. All Right Reserved</p>
+        <p>Copyright &copy; 2022 Ma COLOMBE, Inc. All Right Reserved</p>
 
         <div className="socials">
           <FaTwitterSquare
