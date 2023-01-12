@@ -26,22 +26,29 @@ p{
 }
 
 /* navbar */
-header nav{
+.navLinks{
+  display: flex;
+  gap: 1rem;
+}
+.nav{
   display: flex;
   gap: 16px;
-  justify-content: flex-end;
-  max-width: 1200px;
+  justify-content: space-between;
   margin: 0 auto;
+  align-items: center;
   padding: 3rem;
 }
-header nav h1{
+.mobileNav{
+  display: none;
+}
+.nav h1{
   margin-right: auto;
   font-family: 'Yeon Sung', cursive;
   font-size: 36px;
 }
-header nav a{
+.nav a{
   text-decoration: none;
-  padding: 6px;
+  padding: 16px;
 }
 header nav a.active{
   border-bottom:2px solid var(--primary);
@@ -214,9 +221,19 @@ header nav a.active{
 
 
 @media(max-width:768px){
-  header nav{
-    display: none;
+  .nav{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+  .nav h1{
+    margin: 0;
+
+  }
+  .navlinks a{
+    font-size: 14px;
+  }
+
   .hero{
     flex-direction: column;
     padding: 0;
@@ -237,75 +254,57 @@ header nav a.active{
     padding: 0;
   }
   .story{
-    padding: 0;
-    margin: 0;
+    padding: 2rem;
+    margin: 2rem 0;
     width: 100%;
+  }
+  .quote{
+    margin: 12px;
   }
   .story p{
     font-size: 14px;
+    padding: 1rem;
   }
   .footer_top{
     flex-direction: column;
+    align-items: center;
     padding: 0;
     margin: auto;
   }
+  .footer_top h1{
+    margin-bottom: 2rem;
+  }
+  .footer_right{
+    justify-content: space-between;
+  }
   .footer_bottom{
     flex-direction: column;
+    align-items: center;
     padding: 0;
     margin: auto;
   }
   .testimonial{
     padding: 0;
   }
+  .testimonial h4{
+    margin-bottom: 3rem;
+  }
+  .testimonial h1{
+    margin-top: 2rem;
+  }
+}
+
+/* about page */
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
-@media(max-width:768px){
-  header nav{
-    display: none;
-  }
-  .hero{
-    flex-direction: column;
-    padding: 0;
-  }
-  .content{
-    width: 100%;
-    text-align: center;
-  }
-  .hero img{
-    display: none;
-  }
-  .cards{
-    flex-direction: column;
-    padding: 0;
-  }
-  .stories{
-    flex-direction: column;
-    padding: 0;
-  }
-  .story{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  .story p{
-    font-size: 14px;
-  }
-  .footer_top{
-    flex-direction: column;
-    padding: 0;
-    margin: auto;
-  }
-  .footer_bottom{
-    flex-direction: column;
-    padding: 0;
-    margin: auto;
-  }
-  .testimonial{
-    padding: 0;
-  }
-}
+
+
 
 
 .auth{
