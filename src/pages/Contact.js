@@ -1,5 +1,5 @@
 import { FaInstagramSquare, FaLinkedin, FaFacebookSquare, FaTwitterSquare} from 'react-icons/fa';
-import classes from ".//contact.module.css"
+import classes from "./contact.module.css"
 
 const Contact = () => {
 

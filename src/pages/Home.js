@@ -25,8 +25,8 @@ const Home = () => {
 
       <div className="products">
         <h4>Our Product</h4>
+        
         <h1>Trending Outfit of The Week</h1>
-
         <div className="cards">
           <div className="product">
             <img src={product} alt="product" />
@@ -49,8 +49,8 @@ const Home = () => {
             <p>$48</p>
           </div>
         </div>
-        <h1>Trending Outfit of The Week</h1>
 
+        <h1>Trending Outfit of The Week</h1>
         <div className="cards">
           <div className="product">
             <img src={product} alt="product" />
@@ -73,8 +73,8 @@ const Home = () => {
             <p>$48</p>
           </div>
         </div>
-        <h1>Trending Outfit of The Week</h1>
 
+        <h1>Trending Outfit of The Week</h1>
         <div className="cards">
           <div className="product">
             <img src={product} alt="product" />
