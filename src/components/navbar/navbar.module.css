@@ -54,6 +54,7 @@
     width: 100vw;
     border-top: 2px solid #bc4123;
     height: 50vh;
+    z-index: 100;
   }
   .navlinks a{
     font-size: 14px;
