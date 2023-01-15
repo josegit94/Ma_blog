@@ -1,13 +1,15 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom' 
+
 
 const Posts = () => {
-    const [post, setPost] = useState({});
+    
 
     const location = useLocation();
     const navigate = useNavigate();
 
+    const [post, setPost] = useState({});
     const postId = location.pathname.split("/")[2]
 
     useEffect(() =>{
@@ -38,7 +40,7 @@ const [posts,setPosts] = useState([])
 // delete post
 const handleDelete = async ()=>{
 try{
-     await axios.delete(`/posts/${postId}`);
+     await axios.delete(`/post/${postId}`);
     navigate('/posts')
 }catch(err){
     console.log(err);
@@ -58,10 +60,11 @@ try{
                 <button className='edit'>Edit</button>
                 <button className='delete' onClick={handleDelete}>Delete</button>
         </div>
-        
+    
         ))}
         
         </div>
+        <div className='btn'><Link to="/add">Add Post</Link></div>
 </div>
   )
 }

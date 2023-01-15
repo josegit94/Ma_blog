@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Yeon+Sung&display=swap');
 
 :root{
   --primary: #bc4123;
@@ -36,7 +36,8 @@ header nav{
 }
 header nav h1{
   margin-right: auto;
-  font-family: 'Yeon Sung', cursive;
+  font-family: 'Dancing script', cursive;
+  font-weight: 700;
   font-size: 36px;
 }
 header nav a{
@@ -63,6 +64,7 @@ header nav a.active{
 .content h1{
   font-size: 48px;
   padding-bottom: 2rem;
+  font-family: 'Dacing script', cursive;
 }
 .content p{
   padding-bottom: 2rem;

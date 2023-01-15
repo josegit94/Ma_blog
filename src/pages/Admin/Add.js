@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 
 const Add = () => {
   const state = useLocation().state
-  const [value, setValue] = useState(state?.title || "")
+  const [value, setValue] = useState(state?.value || "")
   const [title, setTitle] = useState(state?.title || "")
   const [caption, setCaption] = useState(state?.caption || "")
   const [file, setFile] = useState(null)
