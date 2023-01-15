@@ -8,7 +8,7 @@ import Register from "./pages/Admin/Register";
 import Login from "./pages/Admin/Login";
 import Posts from "./pages/Admin/post";
 import Add from "./pages/Admin/Add";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 function App() {
   return (
     <BrowserRouter>

@@ -5,10 +5,13 @@ import product1 from "./../img/prod2.jpg";
 import product2 from "./../img/prod3.jpg";
 import pinup from "./../img/pinup.png";
 import clothing from "./../img/clothing.png";
+import Slideshow from "../components/Slideshow";
 
 const Home = () => {
   return (
     <div>
+      <Slideshow />
+      
       <div className="hero">
         <div className="content">
           <h4>2022 Fashion Inspiration</h4>
@@ -25,8 +28,8 @@ const Home = () => {
 
       <div className="products">
         <h4>Our Product</h4>
+        
         <h1>Trending Outfit of The Week</h1>
-
         <div className="cards">
           <div className="product">
             <img src={product} alt="product" />
@@ -49,8 +52,8 @@ const Home = () => {
             <p>$48</p>
           </div>
         </div>
-        <h1>Trending Outfit of The Week</h1>
 
+        <h1>Trending Outfit of The Week</h1>
         <div className="cards">
           <div className="product">
             <img src={product} alt="product" />
@@ -73,8 +76,8 @@ const Home = () => {
             <p>$48</p>
           </div>
         </div>
-        <h1>Trending Outfit of The Week</h1>
 
+        <h1>Trending Outfit of The Week</h1>
         <div className="cards">
           <div className="product">
             <img src={product} alt="product" />
