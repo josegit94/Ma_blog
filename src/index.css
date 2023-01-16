@@ -7,7 +7,7 @@
 body{
   margin: 0;
   font-family: "Poppins";
-  background: rgb(198, 192, 192);
+  
 }
 *{
   color: var(--secondary);
@@ -25,15 +25,15 @@ p{
   cursor: pointer;
 }
 
-/* navbar */
-header nav{
+/* slideshow */
+.each-slide-effect > div {
   display: flex;
-  gap: 16px;
-  justify-content: flex-end;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 510px;
 }
+
 header nav h1{
   margin-right: auto;
   font-family: 'Dancing script', cursive;
@@ -46,6 +46,14 @@ header nav a{
 }
 header nav a.active{
   border-bottom:2px solid var(--primary);
+
+}
+.each-slide-effect span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+
 }
 
 /* showcase */
@@ -89,9 +97,9 @@ header nav a.active{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #f7fafc;
 }
 .products h4{
-  margin-bottom: 2rem;
   color: #bc4123;
 }
 .cards{
@@ -103,6 +111,9 @@ header nav a.active{
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+.product p{
+  margin: 1rem 0;
 }
 .product img{
   width: 300px;
@@ -185,7 +196,7 @@ header nav a.active{
 }
 .footer_top{
   width: 90%;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 2rem;
   display: flex;
   justify-content: space-between;
@@ -212,6 +223,155 @@ header nav a.active{
   fill: #fff;
   cursor: pointer;
 }
+
+.auth{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  height: 100vh; 
+  background-color:rgb(198, 192, 192);
+}
+
+.auth h1{
+  font-size: 20px;
+  color: teal;
+  margin-bottom: 20px; 
+}
+
+.auth form{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: aliceblue;
+  width: 200px;
+  gap: 30px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.auth input {
+padding: 10px;
+border: none;
+border-bottom: 1px solid gray;
+}
+
+.auth button{
+  padding: 10px;
+  border: none;
+  background-color: teal;
+  cursor: pointer;
+}
+
+.auth p {
+ font-style: 12px;
+ color: red;
+ text-align: center;
+}
+
+@media(max-width:768px){
+  .hero{
+    flex-direction: column;
+    padding: 0;
+  }
+  .content{
+    width: 100%;
+    text-align: center;
+  }
+  .hero img{
+    display: none;
+  }
+
+  .products h4{
+    margin-top: 2rem;
+  }
+  .products h1{
+    text-align: center;
+    font-size: 24px;
+    padding: 1rem;
+  }
+  .products{
+    margin: 3rem 0 ;
+  }
+  .cards{
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+
+  .stories{
+    flex-direction: column;
+    padding: 0;
+  }
+  .story{
+    padding: 2rem 0;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  .quote{
+    margin: 12px;
+  }
+  .story p{
+    font-size: 14px;
+    padding: 1rem;
+  }
+
+
+  .footer_top{
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+  }
+  .footer_top h1{
+    margin-bottom: 2rem;
+  }
+  .footer_right{
+    justify-content: space-between;
+  }
+  .footer_bottom{
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+  }
+  .footer_right p{
+    font-size: 12px;
+  }
+  .footer_bottom p{
+    font-size: 12px;
+    text-align: center;
+  }
+  .footer_bottom .socials{
+    padding-bottom: 2rem;
+  }
+
+
+  .testimonial{
+    padding: 0;
+  }
+  .testimonial h4{
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .testimonial h1{
+    margin-top: 2rem;
+  }
+}
+
+
+/* about page */
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+
+
+
+
 
 
 .auth{
@@ -257,48 +417,4 @@ border-bottom: 1px solid gray;
  color: red;
  text-align: center;
 }
-@media(max-width:768px){
-  header nav{
-    display: none;
-  }
-  .hero{
-    flex-direction: column;
-    padding: 0;
-  }
-  .content{
-    width: 100%;
-    text-align: center;
-  }
-  .hero img{
-    display: none;
-  }
-  .cards{
-    flex-direction: column;
-    padding: 0;
-  }
-  .stories{
-    flex-direction: column;
-    padding: 0;
-  }
-  .story{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  .story p{
-    font-size: 14px;
-  }
-  .footer_top{
-    flex-direction: column;
-    padding: 0;
-    margin: auto;
-  }
-  .footer_bottom{
-    flex-direction: column;
-    padding: 0;
-    margin: auto;
-  }
-  .testimonial{
-    padding: 0;
-  }
-}
+
