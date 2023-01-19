@@ -37,13 +37,13 @@ const handleDelete = async ()=>{
         <div className='cards'>
         <div className='product' >
             <div className='img'>
-                <img src={post.img} alt=""/>
+                <img src={`../upload/${post.img}`} alt=""/>
                 </div>
                 <h4> {post.title} </h4>
                 <p>{post.caption}</p>
                 <p>Rwf {post.price}</p>
-       <Link to={`/add?edit=2`} state={post}> <button className='edit'>Edit</button></Link>
-        <button className='edit' onClick={handleDelete}>Delete</button>
+       <Link to={`/add?edit=${post.id}`} state={post}> <button className='delete'>Edit</button></Link>
+        <button className='btn' onClick={handleDelete}>Delete</button>
     </div>
     </div>
     </div>

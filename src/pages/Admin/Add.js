@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Add = () => {
   const state = useLocation().state
@@ -9,7 +9,7 @@ const Add = () => {
   const [price, setprice] = useState(state?.title || "")
   const [file, setFile] = useState(null)
   const [cat, setCat] = useState(state?.cat || "")
-
+  const navigate = useNavigate()
   const upload = async ()=> {
     try{
       const formData = new FormData();
@@ -40,9 +40,11 @@ const Add = () => {
           cat,
           img: file ? imgUrl : ""
         })
+        navigate("/posts")
     }catch(err){
       console.log(err)
     }
+   
   }
   return (
     <div className='add'>
