@@ -5,7 +5,13 @@ import authRoutes from "./routes/auth.js"
 import cookieParser from "cookie-parser"
 import multer from "multer"
 
+
+
+
 const app = express()
+app.get("/", (req,res)=>{
+    res.json("this the Backend")
+})
 
 app.use(express.json())
 app.use(cookieParser())
@@ -22,10 +28,11 @@ app.post('/api/upload', upload.single('file'), function (req,res){
     const file = req.file
     res.status(200).json(file.filename)
 })
-app.use("/api/posts", postRoutes)
-app.use("/api/auth", authRoutes)
-app.use("/api/user", userRoutes)
+app.use("/posts", postRoutes)
+app.use("/auth", authRoutes)
+app.use("/user", userRoutes)
 
-app.listen(process.env.PORT, ()=>{
+
+app.listen(process.env.PORT || 8800, ()=>{
     console.log(`server running on port`)
 })

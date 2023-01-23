@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Testimonial from "../components/Testimonial";
 import pinup from "./../img/pinup.png";
 import clothing from "./../img/clothing.png";
@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(()=>{
       const fetchData = async ()=>{
           try{
-              const res = await axios.get(`/posts${cat}`);
+              const res = await axios.get(`https://macolombe.herokuapp.com/api/posts${cat}`);
               setPosts(res.data)
           }catch(err){
               console.log(err)
