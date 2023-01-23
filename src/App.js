@@ -30,7 +30,6 @@ function App() {
         <Route path="add" element={<Add/>} ></Route>
         <Route path="login" element={<Login/>} ></Route>
         <Route path='single/:pid' element={<Single />} />
-
       </Routes>
       <Footer/>
     </main>

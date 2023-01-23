@@ -14,7 +14,7 @@ const Add = () => {
     try{
       const formData = new FormData();
       formData.append("file", file)
-      const res = await axios.post("https://macolombe.herokuapp.com/api/upload", formData)
+      const res = await axios.post("/upload", formData)
       return res.data
     }catch(err) {
       console.log(err)
@@ -25,7 +25,7 @@ const Add = () => {
     e.preventDefault()
     const imgUrl = await upload()
     try{
-        state ? await axios.put(`https://macolombe.herokuapp.com/api/posts/${state.id}`, {
+        state ? await axios.put(`/posts/${state.id}`, {
           title,
           caption,
           price,
@@ -33,7 +33,7 @@ const Add = () => {
           img: file, imgUrl : ""
 
         })
-        : await axios.post(`https://macolombe.herokuapp.com/api/posts/`, {
+        : await axios.post(`/posts`, {
           title,
           caption,
           price,

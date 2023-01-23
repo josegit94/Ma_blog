@@ -7,11 +7,7 @@ import multer from "multer"
 
 
 
-
 const app = express()
-app.get("/", (req,res)=>{
-    res.json("this the Backend")
-})
 
 app.use(express.json())
 app.use(cookieParser())
@@ -24,7 +20,7 @@ const storage = multer.diskStorage({
     }
 })
 const upload =multer({storage})
-app.post('/api/upload', upload.single('file'), function (req,res){
+app.post('/upload', upload.single('file'), function (req,res){
     const file = req.file
     res.status(200).json(file.filename)
 })
@@ -32,7 +28,7 @@ app.use("/posts", postRoutes)
 app.use("/auth", authRoutes)
 app.use("/user", userRoutes)
 
-
-app.listen(process.env.PORT || 8800, ()=>{
-    console.log(`server running on port`)
+const PORT = 8800
+app.listen(process.env.PORT || PORT  , ()=>{
+    console.log(`server running on ${PORT}`)
 })

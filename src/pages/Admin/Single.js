@@ -13,7 +13,7 @@ const Single = () => {
     useEffect(() =>{
         const fetchData = async () =>{
             try {
-                const res = await axios.get(`https://macolombe.herokuapp.com/api/posts/${postId}`)
+                const res = await axios.get(`/posts/${postId}`)
                 setPost(res.data)
                 console.log(res)
             } catch(err) {
