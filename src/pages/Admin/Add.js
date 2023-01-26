@@ -23,14 +23,15 @@ const Add = () => {
 
   const handleSubmit = async e=>{
     e.preventDefault()
-    const imgUrl = await upload()
+    const imgUrl = await upload();
+    
     try{
         state ? await axios.put(`/posts/${state.id}`, {
           title,
           caption,
           price,
           cat,
-          img: file, imgUrl : ""
+          img: file ? imgUrl : ""
 
         })
         : await axios.post(`/posts`, {

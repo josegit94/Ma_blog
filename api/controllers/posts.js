@@ -74,7 +74,7 @@ export const updatePost = (req,res)=>{
             req.body.price,
             req.body.img,
             req.body.cat
-        ]
+        ];
 
         db.query(q,[...values,postId, userInfo.id],  (err,data)=>{
             if(err) return res.status(500).json(err);
@@ -84,7 +84,7 @@ export const updatePost = (req,res)=>{
 };
 
 export const getShoes = (req,res)=>{
-    const q = "SELECT * FROM posts WHERE `cat`=Shoes"
+    const q = "SELECT `id`,`title`,`caption`,`price`, `img`, `uid`,`cat` FROM posts WHERE cat = Shoes"
 
     db.query(q,[req.query.cat], (err,data)=>{
         if(err) return res.status(500).send(err);

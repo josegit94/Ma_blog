@@ -4,12 +4,13 @@ import userRoutes from "./routes/user.js"
 import authRoutes from "./routes/auth.js"
 import cookieParser from "cookie-parser"
 import multer from "multer"
-
+import cors from "cors"
 
 
 const app = express()
 
 app.use(express.json())
+app.use(cors("https://ma-colombe.com/"))
 app.use(cookieParser())
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -20,7 +21,7 @@ const storage = multer.diskStorage({
     }
 })
 const upload =multer({storage})
-app.post('/upload', upload.single('file'), function (req,res){
+app.post('/api/upload', upload.single('file'), function (req,res){
     const file = req.file
     res.status(200).json(file.filename)
 })
@@ -28,7 +29,7 @@ app.use("/posts", postRoutes)
 app.use("/auth", authRoutes)
 app.use("/user", userRoutes)
 
-const PORT = 8800
-app.listen(process.env.PORT || PORT  , ()=>{
+const PORT = process.env.PORT
+app.listen(PORT || 8800  , ()=>{
     console.log(`server running on ${PORT}`)
 })
