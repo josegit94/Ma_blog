@@ -43,7 +43,7 @@ const handleDelete = async ()=>{
                 <p>{post.caption}</p>
                 <p>Rwf {post.price}</p>
        <Link to={`/add?edit=${post.id}`} state={post}> <button className='delete'>Edit</button></Link>
-        <button className='btn' onClick={handleDelete}>Delete</button>
+        <button className='delete' onClick={handleDelete}>Delete</button>
     </div>
     </div>
     </div>
