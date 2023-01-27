@@ -77,7 +77,7 @@ const Add = () => {
         <label htmlFor='Pants'>Pants</label>
         </div>
         <button onClick={handleSubmit} >Add</button>
-         <p></p>
+         
     </form>
     </div>
     </div>
