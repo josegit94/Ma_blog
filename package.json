@@ -1,6 +1,5 @@
 {
     "name": "ma",
-    "homepage": "https://ma-colombe.com",
     "version": "0.1.0",
     "engines": {
       "node": "16.16.0"
